@@ -8,6 +8,7 @@ import {
   Group,
   Checkbox,
   ActionIcon,
+   Badge,
 } from "@mantine/core";
 import { IconTrash } from "@tabler/icons-react";
 import { useState } from "react";
@@ -41,6 +42,13 @@ export default function HomePage() {
               <Group justify="space-between" align="flex-start">
                 <Stack>
                   {/* เพิ่ม assignees ตรงนี้*/}
+                  {task.assignees.length > 0 && (
+                    <Group gap="xs">
+                      {task.assignees.map((assignee) => (
+                        <Badge  variant="light" color="blue" radius="lg" key={assignee}>{assignee}</Badge>
+                      ))}
+                    </Group>
+                  )}
                   <Text
                     fw={600}
                     td={task.isDone ? "line-through" : "none"}
