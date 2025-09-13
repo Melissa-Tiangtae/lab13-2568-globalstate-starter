@@ -5,7 +5,7 @@ import {
   Textarea,
   Button,
   MultiSelect,
-  type MultiSelectProps,
+  //type MultiSelectProps,
   Avatar,
   Group,
   Text,
@@ -59,8 +59,8 @@ export default function AddTaskModal({
     description,
     dueDate,
      assignees,
-     setTasks, // ใช้ชื่อตาม interface (แม้จะเป็น setTitle จริงๆ)
-    setdescription, // ใช้ชื่อตาม interface
+     setTasks, 
+    setdescription, 
     setdueDate,
      setAssignees,
     resetForm,
@@ -73,7 +73,7 @@ export default function AddTaskModal({
   };
 
   const dateValue = dueDate ? new Date(dueDate) : null;
-  const users = Object.keys(usersData);
+
   
     const availableUsers = Object.keys(usersData).filter(
     (user) => !assignees.includes(user)
