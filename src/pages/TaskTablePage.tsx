@@ -87,7 +87,7 @@ export default function TodoTablePage() {
               <Table.Th>Completed</Table.Th>
               <Table.Th>Actions</Table.Th>
               {/* เพิ่ม table header assignees ตรงนี้*/}
-              <Table.Th>Assignee</Table.Th>
+              <Table.Th>Assignees</Table.Th>
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>{rows}</Table.Tbody>
